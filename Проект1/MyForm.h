@@ -644,6 +644,16 @@ namespace Проект1 {
 						 }
 
 					 }
+					 if (mas[i] == 'b' && mas[i + 1] == 'g' && mas[i + 2] == 't' && (i + 3 < mas->Length) && mas[i + 3] == ' ')
+					 {
+						 if (GT->Text == Convert::ToString("1"))
+						 {
+							 for (int j = 0; j < mas->Length; j++)
+							 {
+								 if (mas[j] == mas[i + 4] && mas[j + 1] == ':'){ i = j; GT->Text = Convert::ToString(0); break; }
+							 }
+						 }
+					 }
 					 else continue;
 				 }
 
