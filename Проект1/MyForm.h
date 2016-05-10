@@ -654,6 +654,16 @@ namespace Проект1 {
 							 }
 						 }
 					 }
+					 if (mas[i] == 'b' && mas[i + 1] == 'z' && (i + 2 < mas->Length) && mas[i + 2] == ' ')
+					 {
+						 if (Z->Text == Convert::ToString("1"))
+						 {
+							 for (int j = 0; j < mas->Length; j++)
+							 {
+								 if (mas[j] == mas[i + 3] && mas[j + 1] == ':'){ i = j; Z->Text = Convert::ToString(0); break; }
+							 }
+						 }
+					 }
 					 else continue;
 				 }
 
