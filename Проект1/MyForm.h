@@ -36,7 +36,7 @@ namespace Проект1 {
 		}
 	private: System::Windows::Forms::RichTextBox^  My_text;
 	private: System::Windows::Forms::ContextMenuStrip^  contextMenuStrip1;
-	private: System::Windows::Forms::TextBox^  textBox1;
+
 	private: System::Windows::Forms::Button^  button1;
 	private: System::Windows::Forms::TextBox^  T0;
 	private: System::Windows::Forms::TextBox^  T1;
@@ -101,7 +101,6 @@ namespace Проект1 {
 			this->components = (gcnew System::ComponentModel::Container());
 			this->My_text = (gcnew System::Windows::Forms::RichTextBox());
 			this->contextMenuStrip1 = (gcnew System::Windows::Forms::ContextMenuStrip(this->components));
-			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->T0 = (gcnew System::Windows::Forms::TextBox());
 			this->T1 = (gcnew System::Windows::Forms::TextBox());
@@ -135,20 +134,13 @@ namespace Проект1 {
 			this->contextMenuStrip1->Name = L"contextMenuStrip1";
 			this->contextMenuStrip1->Size = System::Drawing::Size(61, 4);
 			// 
-			// textBox1
-			// 
-			this->textBox1->Location = System::Drawing::Point(475, 12);
-			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(100, 20);
-			this->textBox1->TabIndex = 1;
-			// 
 			// button1
 			// 
 			this->button1->Location = System::Drawing::Point(500, 275);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(75, 29);
 			this->button1->TabIndex = 2;
-			this->button1->Text = L"button1";
+			this->button1->Text = L"Запуск!";
 			this->button1->UseVisualStyleBackColor = true;
 			this->button1->Click += gcnew System::EventHandler(this, &MyForm::button1_Click);
 			// 
@@ -304,10 +296,9 @@ namespace Проект1 {
 			this->Controls->Add(this->T1);
 			this->Controls->Add(this->T0);
 			this->Controls->Add(this->button1);
-			this->Controls->Add(this->textBox1);
 			this->Controls->Add(this->My_text);
 			this->Name = L"MyForm";
-			this->Text = L"MyForm";
+			this->Text = L"55 balov";
 			this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
 			this->ResumeLayout(false);
 			this->PerformLayout();
@@ -321,6 +312,14 @@ namespace Проект1 {
 				
 	}
 	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
+				 GT->Text = Convert::ToString(0);
+				 Z->Text = Convert::ToString(0);
+				 ERR->Text = Convert::ToString(0);
+				 if (T0->Text == Convert::ToString("")){ T0->Text = Convert::ToString(0); }
+				 if (T1->Text == Convert::ToString("")){ T1->Text = Convert::ToString(0); }
+				 if (T2->Text == Convert::ToString("")){ T2->Text = Convert::ToString(0); }
+				 if (T3->Text == Convert::ToString("")){ T3->Text = Convert::ToString(0); }
+				 if (T4->Text == Convert::ToString("")){ T4->Text = Convert::ToString(0); }
 				 array<Char>^ mas = My_text->Text->ToCharArray();
 				 for (int i = 0; i < mas->Length; i++)
 				 {
@@ -667,9 +666,6 @@ namespace Проект1 {
 					 else continue;
 				 }
 
-
-
-				 textBox1->Text = gcnew String(mas);
 	}
 private: System::Void label1_Click(System::Object^  sender, System::EventArgs^  e) {
 }
