@@ -598,47 +598,48 @@ namespace Проект1 {
 						 case '0':
 							 switch (mas[i + 6])
 							 {
-							 case '0':if (Convert::ToInt32(T0->Text) > Convert::ToInt32(T0->Text)){ GT->Text = Convert::ToString(1); }; break;
-							 case '1':if (Convert::ToInt32(T0->Text) > Convert::ToInt32(T1->Text)){ GT->Text = Convert::ToString(1); }; break;
-							 case '2':if (Convert::ToInt32(T0->Text) > Convert::ToInt32(T2->Text)){ GT->Text = Convert::ToString(1);; break;
-							 case '3':if (Convert::ToInt32(T0->Text) > Convert::ToInt32(T3->Text)){ GT->Text = Convert::ToString(1);; break;
-							 case '4':if (Convert::ToInt32(T0->Text) > Convert::ToInt32(T4->Text)){ GT->Text = Convert::ToString(1);; break;
+							 case '0':if (Convert::ToInt32(T0->Text) > Convert::ToInt32(T0->Text)){ GT->Text = Convert::ToString(1); }else GT->Text = Convert::ToString(0); break;
+							 case '1':if (Convert::ToInt32(T0->Text) > Convert::ToInt32(T1->Text)){ GT->Text = Convert::ToString(1); }else GT->Text = Convert::ToString(0); break;
+							 case '2':if (Convert::ToInt32(T0->Text) > Convert::ToInt32(T2->Text)){ GT->Text = Convert::ToString(1); }else GT->Text = Convert::ToString(0); break;
+							 case '3':if (Convert::ToInt32(T0->Text) > Convert::ToInt32(T3->Text)){ GT->Text = Convert::ToString(1); }else GT->Text = Convert::ToString(0); break;
+							 case '4':if (Convert::ToInt32(T0->Text) > Convert::ToInt32(T4->Text)){ GT->Text = Convert::ToString(1); }else GT->Text = Convert::ToString(0); break;
+									  
 							 } break;
 						 case '1':
 							 switch (mas[i + 6])
 							 {
-							 case '0':if (Convert::ToInt32(T1->Text) > Convert::ToInt32(T0->Text)){ GT->Text = Convert::ToString(1); }; break;
-							 case '1':if (Convert::ToInt32(T1->Text) > Convert::ToInt32(T1->Text)){ GT->Text = Convert::ToString(1); }; break;
-							 case '2':if (Convert::ToInt32(T1->Text) > Convert::ToInt32(T2->Text)){ GT->Text = Convert::ToString(1);; break;
-							 case '3':if (Convert::ToInt32(T1->Text) > Convert::ToInt32(T3->Text)){ GT->Text = Convert::ToString(1);; break;
-							 case '4':if (Convert::ToInt32(T1->Text) > Convert::ToInt32(T4->Text)){ GT->Text = Convert::ToString(1);; break;
+							case '0':if (Convert::ToInt32(T1->Text) > Convert::ToInt32(T0->Text)){ GT->Text = Convert::ToString(1); }else GT->Text = Convert::ToString(0); break;
+							 case '1':if (Convert::ToInt32(T1->Text) > Convert::ToInt32(T1->Text)){ GT->Text = Convert::ToString(1); }else GT->Text = Convert::ToString(0); break;
+							 case '2':if (Convert::ToInt32(T1->Text) > Convert::ToInt32(T2->Text)){ GT->Text = Convert::ToString(1); }else GT->Text = Convert::ToString(0); break;
+							 case '3':if (Convert::ToInt32(T1->Text) > Convert::ToInt32(T3->Text)){ GT->Text = Convert::ToString(1); }else GT->Text = Convert::ToString(0); break;
+							 case '4':if (Convert::ToInt32(T1->Text) > Convert::ToInt32(T4->Text)){ GT->Text = Convert::ToString(1); }else GT->Text = Convert::ToString(0); break;
 							 } break;
 						 case '2':
 							 switch (mas[i + 6])
 							 {
-							 case '0':if (Convert::ToInt32(T2->Text) > Convert::ToInt32(T0->Text)){ GT->Text = Convert::ToString(1); }; break;
-							 case '1':if (Convert::ToInt32(T2->Text) > Convert::ToInt32(T1->Text)){ GT->Text = Convert::ToString(1); }; break;
-							 case '2':if (Convert::ToInt32(T2->Text) > Convert::ToInt32(T2->Text)){ GT->Text = Convert::ToString(1);; break;
-							 case '3':if (Convert::ToInt32(T2->Text) > Convert::ToInt32(T3->Text)){ GT->Text = Convert::ToString(1);; break;
-							 case '4':if (Convert::ToInt32(T2->Text) > Convert::ToInt32(T4->Text)){ GT->Text = Convert::ToString(1);; break;
+							case '0':if (Convert::ToInt32(T2->Text) > Convert::ToInt32(T0->Text)){ GT->Text = Convert::ToString(1); }else GT->Text = Convert::ToString(0); break;
+							 case '1':if (Convert::ToInt32(T2->Text) > Convert::ToInt32(T1->Text)){ GT->Text = Convert::ToString(1); }else GT->Text = Convert::ToString(0); break;
+							 case '2':if (Convert::ToInt32(T2->Text) > Convert::ToInt32(T2->Text)){ GT->Text = Convert::ToString(1); }else GT->Text = Convert::ToString(0); break;
+							 case '3':if (Convert::ToInt32(T2->Text) > Convert::ToInt32(T3->Text)){ GT->Text = Convert::ToString(1); }else GT->Text = Convert::ToString(0); break;
+							 case '4':if (Convert::ToInt32(T2->Text) > Convert::ToInt32(T4->Text)){ GT->Text = Convert::ToString(1); }else GT->Text = Convert::ToString(0); break;
 							 } break;
 						 case '3':
 							 switch (mas[i + 6])
 							 {
-							 case '0':if (Convert::ToInt32(T3->Text) > Convert::ToInt32(T0->Text)){ GT->Text = Convert::ToString(1); }; break;
-							 case '1':if (Convert::ToInt32(T3->Text) > Convert::ToInt32(T1->Text)){ GT->Text = Convert::ToString(1); }; break;
-							 case '2':if (Convert::ToInt32(T3->Text) > Convert::ToInt32(T2->Text)){ GT->Text = Convert::ToString(1);; break;
-							 case '3':if (Convert::ToInt32(T3->Text) > Convert::ToInt32(T3->Text)){ GT->Text = Convert::ToString(1);; break;
-							 case '4':if (Convert::ToInt32(T3->Text) > Convert::ToInt32(T4->Text)){ GT->Text = Convert::ToString(1);; break;
+							case '0':if (Convert::ToInt32(T3->Text) > Convert::ToInt32(T0->Text)){ GT->Text = Convert::ToString(1); }else GT->Text = Convert::ToString(0); break;
+							 case '1':if (Convert::ToInt32(T3->Text) > Convert::ToInt32(T1->Text)){ GT->Text = Convert::ToString(1); }else GT->Text = Convert::ToString(0); break;
+							 case '2':if (Convert::ToInt32(T3->Text) > Convert::ToInt32(T2->Text)){ GT->Text = Convert::ToString(1); }else GT->Text = Convert::ToString(0); break;
+							 case '3':if (Convert::ToInt32(T3->Text) > Convert::ToInt32(T3->Text)){ GT->Text = Convert::ToString(1); }else GT->Text = Convert::ToString(0); break;
+							 case '4':if (Convert::ToInt32(T3->Text) > Convert::ToInt32(T4->Text)){ GT->Text = Convert::ToString(1); }else GT->Text = Convert::ToString(0); break;
 							 } break;
 						 case '4':
 							 switch (mas[i + 6])
 							 {
-							 case '0':if (Convert::ToInt32(T4->Text) > Convert::ToInt32(T0->Text)){ GT->Text = Convert::ToString(1); }; break;
-							 case '1':if (Convert::ToInt32(T4->Text) > Convert::ToInt32(T1->Text)){ GT->Text = Convert::ToString(1); }; break;
-							 case '2':if (Convert::ToInt32(T4->Text) > Convert::ToInt32(T2->Text)){ GT->Text = Convert::ToString(1);; break;
-							 case '3':if (Convert::ToInt32(T4->Text) > Convert::ToInt32(T3->Text)){ GT->Text = Convert::ToString(1);; break;
-							 case '4':if (Convert::ToInt32(T4->Text) > Convert::ToInt32(T4->Text)){ GT->Text = Convert::ToString(1);; break;
+							case '0':if (Convert::ToInt32(T4->Text) > Convert::ToInt32(T0->Text)){ GT->Text = Convert::ToString(1); }else GT->Text = Convert::ToString(0); break;
+							 case '1':if (Convert::ToInt32(T4->Text) > Convert::ToInt32(T1->Text)){ GT->Text = Convert::ToString(1); }else GT->Text = Convert::ToString(0); break;
+							 case '2':if (Convert::ToInt32(T4->Text) > Convert::ToInt32(T2->Text)){ GT->Text = Convert::ToString(1); }else GT->Text = Convert::ToString(0); break;
+							 case '3':if (Convert::ToInt32(T4->Text) > Convert::ToInt32(T3->Text)){ GT->Text = Convert::ToString(1); }else GT->Text = Convert::ToString(0); break;
+							 case '4':if (Convert::ToInt32(T4->Text) > Convert::ToInt32(T4->Text)){ GT->Text = Convert::ToString(1); }else GT->Text = Convert::ToString(0); break;
 							 } break;
 						 }
 
