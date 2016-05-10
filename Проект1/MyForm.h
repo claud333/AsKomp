@@ -48,6 +48,15 @@ namespace Проект1 {
 	private: System::Windows::Forms::Label^  label3;
 	private: System::Windows::Forms::Label^  label4;
 	private: System::Windows::Forms::Label^  label5;
+	private: System::Windows::Forms::TextBox^  Z;
+	private: System::Windows::Forms::TextBox^  ERR;
+
+
+	private: System::Windows::Forms::TextBox^  GT;
+
+	private: System::Windows::Forms::Label^  label6;
+	private: System::Windows::Forms::Label^  label7;
+	private: System::Windows::Forms::Label^  label8;
 
 
 
@@ -104,6 +113,12 @@ namespace Проект1 {
 			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->label5 = (gcnew System::Windows::Forms::Label());
+			this->Z = (gcnew System::Windows::Forms::TextBox());
+			this->ERR = (gcnew System::Windows::Forms::TextBox());
+			this->GT = (gcnew System::Windows::Forms::TextBox());
+			this->label6 = (gcnew System::Windows::Forms::Label());
+			this->label7 = (gcnew System::Windows::Forms::Label());
+			this->label8 = (gcnew System::Windows::Forms::Label());
 			this->SuspendLayout();
 			// 
 			// My_text
@@ -218,11 +233,66 @@ namespace Проект1 {
 			this->label5->TabIndex = 12;
 			this->label5->Text = L"4";
 			// 
+			// Z
+			// 
+			this->Z->Location = System::Drawing::Point(472, 172);
+			this->Z->Name = L"Z";
+			this->Z->Size = System::Drawing::Size(16, 20);
+			this->Z->TabIndex = 13;
+			// 
+			// ERR
+			// 
+			this->ERR->Location = System::Drawing::Point(565, 172);
+			this->ERR->Name = L"ERR";
+			this->ERR->Size = System::Drawing::Size(16, 20);
+			this->ERR->TabIndex = 14;
+			// 
+			// GT
+			// 
+			this->GT->Location = System::Drawing::Point(518, 172);
+			this->GT->Name = L"GT";
+			this->GT->Size = System::Drawing::Size(16, 20);
+			this->GT->TabIndex = 15;
+			// 
+			// label6
+			// 
+			this->label6->AutoSize = true;
+			this->label6->Location = System::Drawing::Point(562, 152);
+			this->label6->Name = L"label6";
+			this->label6->Size = System::Drawing::Size(30, 13);
+			this->label6->TabIndex = 16;
+			this->label6->Text = L"ERR";
+			// 
+			// label7
+			// 
+			this->label7->AutoSize = true;
+			this->label7->Location = System::Drawing::Point(514, 152);
+			this->label7->Name = L"label7";
+			this->label7->Size = System::Drawing::Size(22, 13);
+			this->label7->TabIndex = 17;
+			this->label7->Text = L"GT";
+			// 
+			// label8
+			// 
+			this->label8->AutoSize = true;
+			this->label8->Location = System::Drawing::Point(475, 152);
+			this->label8->Name = L"label8";
+			this->label8->Size = System::Drawing::Size(14, 13);
+			this->label8->TabIndex = 18;
+			this->label8->Text = L"Z";
+			this->label8->Click += gcnew System::EventHandler(this, &MyForm::label8_Click);
+			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(593, 316);
+			this->Controls->Add(this->label8);
+			this->Controls->Add(this->label7);
+			this->Controls->Add(this->label6);
+			this->Controls->Add(this->GT);
+			this->Controls->Add(this->ERR);
+			this->Controls->Add(this->Z);
 			this->Controls->Add(this->label5);
 			this->Controls->Add(this->label4);
 			this->Controls->Add(this->label3);
@@ -310,12 +380,13 @@ namespace Проект1 {
 					 ////////////////////////////////////
 					 if (mas[i] == 'd' && mas[i + 1] == 'i' && mas[i + 2] == 'v' && (i + 3<mas->Length) && mas[i + 3] == ' '&&mas[i + 5] == ',')
 					 {
+						
 						 switch (mas[i + 4])
 						 {
 						 case '0':
 							 switch (mas[i + 6])
 							 {
-							 case '0':T0->Text = Convert::ToString(Convert::ToInt32(T0->Text) / Convert::ToInt32(T0->Text)); break;
+							 case '0': ERR->Text = Convert::ToString(1); break;
 							 case '1':T0->Text = Convert::ToString(Convert::ToInt32(T0->Text) / Convert::ToInt32(T1->Text)); break;
 							 case '2':T0->Text = Convert::ToString(Convert::ToInt32(T0->Text) / Convert::ToInt32(T2->Text)); break;
 							 case '3':T0->Text = Convert::ToString(Convert::ToInt32(T0->Text) / Convert::ToInt32(T3->Text)); break;
@@ -324,7 +395,7 @@ namespace Проект1 {
 						 case '1':
 							 switch (mas[i + 6])
 							 {
-							 case '0':T1->Text = Convert::ToString(Convert::ToInt32(T1->Text) / Convert::ToInt32(T0->Text)); break;
+							 case '0':ERR->Text = Convert::ToString(1); break;
 							 case '1':T1->Text = Convert::ToString(Convert::ToInt32(T1->Text) / Convert::ToInt32(T1->Text)); break;
 							 case '2':T1->Text = Convert::ToString(Convert::ToInt32(T1->Text) / Convert::ToInt32(T2->Text)); break;
 							 case '3':T1->Text = Convert::ToString(Convert::ToInt32(T1->Text) / Convert::ToInt32(T3->Text)); break;
@@ -333,7 +404,7 @@ namespace Проект1 {
 						 case '2':
 							 switch (mas[i + 6])
 							 {
-							 case '0':T2->Text = Convert::ToString(Convert::ToInt32(T2->Text) / Convert::ToInt32(T0->Text)); break;
+							 case '0':ERR->Text = Convert::ToString(1); break;
 							 case '1':T2->Text = Convert::ToString(Convert::ToInt32(T2->Text) / Convert::ToInt32(T1->Text)); break;
 							 case '2':T2->Text = Convert::ToString(Convert::ToInt32(T2->Text) / Convert::ToInt32(T2->Text)); break;
 							 case '3':T2->Text = Convert::ToString(Convert::ToInt32(T2->Text) / Convert::ToInt32(T3->Text)); break;
@@ -342,7 +413,7 @@ namespace Проект1 {
 						 case '3':
 							 switch (mas[i + 6])
 							 {
-							 case '0':T3->Text = Convert::ToString(Convert::ToInt32(T3->Text) / Convert::ToInt32(T0->Text)); break;
+							 case '0':ERR->Text = Convert::ToString(1); break;
 							 case '1':T3->Text = Convert::ToString(Convert::ToInt32(T3->Text) / Convert::ToInt32(T1->Text)); break;
 							 case '2':T3->Text = Convert::ToString(Convert::ToInt32(T3->Text) / Convert::ToInt32(T2->Text)); break;
 							 case '3':T3->Text = Convert::ToString(Convert::ToInt32(T3->Text) / Convert::ToInt32(T3->Text)); break;
@@ -351,11 +422,223 @@ namespace Проект1 {
 						 case '4':
 							 switch (mas[i + 6])
 							 {
-							 case '0':T4->Text = Convert::ToString(Convert::ToInt32(T4->Text) / Convert::ToInt32(T0->Text)); break;
+							 case '0':ERR->Text = Convert::ToString(1); break;
 							 case '1':T4->Text = Convert::ToString(Convert::ToInt32(T4->Text) / Convert::ToInt32(T1->Text)); break;
 							 case '2':T4->Text = Convert::ToString(Convert::ToInt32(T4->Text) / Convert::ToInt32(T2->Text)); break;
 							 case '3':T4->Text = Convert::ToString(Convert::ToInt32(T4->Text) / Convert::ToInt32(T3->Text)); break;
 							 case '4':T4->Text = Convert::ToString(Convert::ToInt32(T4->Text) / Convert::ToInt32(T4->Text)); break;
+							 } break;
+						 }
+
+					 }
+					 ////////////////////////////////////////////////////////////////
+					 if (mas[i] == 'm' && mas[i + 1] == 'u' && mas[i + 2] == 'l' && (i + 3<mas->Length) && mas[i + 3] == ' '&&mas[i + 5] == ',')
+					 {
+						 switch (mas[i + 4])
+						 {
+						 case '0':
+							 switch (mas[i + 6])
+							 {
+							 case '0':T0->Text = Convert::ToString(Convert::ToInt32(T0->Text) * Convert::ToInt32(T0->Text)); break;
+							 case '1':T0->Text = Convert::ToString(Convert::ToInt32(T0->Text) * Convert::ToInt32(T1->Text)); break;
+							 case '2':T0->Text = Convert::ToString(Convert::ToInt32(T0->Text) * Convert::ToInt32(T2->Text)); break;
+							 case '3':T0->Text = Convert::ToString(Convert::ToInt32(T0->Text) * Convert::ToInt32(T3->Text)); break;
+							 case '4':T0->Text = Convert::ToString(Convert::ToInt32(T0->Text) * Convert::ToInt32(T4->Text)); break;
+							 } break;
+						 case '1':
+							 switch (mas[i + 6])
+							 {
+							 case '0':T1->Text = Convert::ToString(Convert::ToInt32(T1->Text) * Convert::ToInt32(T0->Text)); break;
+							 case '1':T1->Text = Convert::ToString(Convert::ToInt32(T1->Text) * Convert::ToInt32(T1->Text)); break;
+							 case '2':T1->Text = Convert::ToString(Convert::ToInt32(T1->Text) * Convert::ToInt32(T2->Text)); break;
+							 case '3':T1->Text = Convert::ToString(Convert::ToInt32(T1->Text) * Convert::ToInt32(T3->Text)); break;
+							 case '4':T1->Text = Convert::ToString(Convert::ToInt32(T1->Text) * Convert::ToInt32(T4->Text)); break;
+							 } break;
+						 case '2':
+							 switch (mas[i + 6])
+							 {
+							 case '0':T2->Text = Convert::ToString(Convert::ToInt32(T2->Text) * Convert::ToInt32(T0->Text)); break;
+							 case '1':T2->Text = Convert::ToString(Convert::ToInt32(T2->Text) * Convert::ToInt32(T1->Text)); break;
+							 case '2':T2->Text = Convert::ToString(Convert::ToInt32(T2->Text) * Convert::ToInt32(T2->Text)); break;
+							 case '3':T2->Text = Convert::ToString(Convert::ToInt32(T2->Text) * Convert::ToInt32(T3->Text)); break;
+							 case '4':T2->Text = Convert::ToString(Convert::ToInt32(T2->Text) * Convert::ToInt32(T4->Text)); break;
+							 } break;
+						 case '3':
+							 switch (mas[i + 6])
+							 {
+							 case '0':T3->Text = Convert::ToString(Convert::ToInt32(T3->Text) * Convert::ToInt32(T0->Text)); break;
+							 case '1':T3->Text = Convert::ToString(Convert::ToInt32(T3->Text) * Convert::ToInt32(T1->Text)); break;
+							 case '2':T3->Text = Convert::ToString(Convert::ToInt32(T3->Text) * Convert::ToInt32(T2->Text)); break;
+							 case '3':T3->Text = Convert::ToString(Convert::ToInt32(T3->Text) * Convert::ToInt32(T3->Text)); break;
+							 case '4':T3->Text = Convert::ToString(Convert::ToInt32(T3->Text) * Convert::ToInt32(T4->Text)); break;
+							 } break;
+						 case '4':
+							 switch (mas[i + 6])
+							 {
+							 case '0':T4->Text = Convert::ToString(Convert::ToInt32(T4->Text) * Convert::ToInt32(T0->Text)); break;
+							 case '1':T4->Text = Convert::ToString(Convert::ToInt32(T4->Text) * Convert::ToInt32(T1->Text)); break;
+							 case '2':T4->Text = Convert::ToString(Convert::ToInt32(T4->Text) * Convert::ToInt32(T2->Text)); break;
+							 case '3':T4->Text = Convert::ToString(Convert::ToInt32(T4->Text) * Convert::ToInt32(T3->Text)); break;
+							 case '4':T4->Text = Convert::ToString(Convert::ToInt32(T4->Text) * Convert::ToInt32(T4->Text)); break;
+							 } break;
+						 }
+
+					 }
+					 ////////////////////////////////////////////////////////////////
+					 if (mas[i] == 's' && mas[i + 1] == 'u' && mas[i + 2] == 'b' && (i + 3<mas->Length) && mas[i + 3] == ' '&&mas[i + 5] == ',')
+					 {
+						 switch (mas[i + 4])
+						 {
+						 case '0':
+							 switch (mas[i + 6])
+							 {
+							 case '0':T0->Text = Convert::ToString(Convert::ToInt32(T0->Text) - Convert::ToInt32(T0->Text)); break;
+							 case '1':T0->Text = Convert::ToString(Convert::ToInt32(T0->Text) - Convert::ToInt32(T1->Text)); break;
+							 case '2':T0->Text = Convert::ToString(Convert::ToInt32(T0->Text) - Convert::ToInt32(T2->Text)); break;
+							 case '3':T0->Text = Convert::ToString(Convert::ToInt32(T0->Text) - Convert::ToInt32(T3->Text)); break;
+							 case '4':T0->Text = Convert::ToString(Convert::ToInt32(T0->Text) - Convert::ToInt32(T4->Text)); break;
+							 } break;
+						 case '1':
+							 switch (mas[i + 6])
+							 {
+							 case '0':T1->Text = Convert::ToString(Convert::ToInt32(T1->Text) - Convert::ToInt32(T0->Text)); break;
+							 case '1':T1->Text = Convert::ToString(Convert::ToInt32(T1->Text) - Convert::ToInt32(T1->Text)); break;
+							 case '2':T1->Text = Convert::ToString(Convert::ToInt32(T1->Text) - Convert::ToInt32(T2->Text)); break;
+							 case '3':T1->Text = Convert::ToString(Convert::ToInt32(T1->Text) - Convert::ToInt32(T3->Text)); break;
+							 case '4':T1->Text = Convert::ToString(Convert::ToInt32(T1->Text) - Convert::ToInt32(T4->Text)); break;
+							 } break;
+						 case '2':
+							 switch (mas[i + 6])
+							 {
+							 case '0':T2->Text = Convert::ToString(Convert::ToInt32(T2->Text) - Convert::ToInt32(T0->Text)); break;
+							 case '1':T2->Text = Convert::ToString(Convert::ToInt32(T2->Text) - Convert::ToInt32(T1->Text)); break;
+							 case '2':T2->Text = Convert::ToString(Convert::ToInt32(T2->Text) - Convert::ToInt32(T2->Text)); break;
+							 case '3':T2->Text = Convert::ToString(Convert::ToInt32(T2->Text) - Convert::ToInt32(T3->Text)); break;
+							 case '4':T2->Text = Convert::ToString(Convert::ToInt32(T2->Text) - Convert::ToInt32(T4->Text)); break;
+							 } break;
+						 case '3':
+							 switch (mas[i + 6])
+							 {
+							 case '0':T3->Text = Convert::ToString(Convert::ToInt32(T3->Text) - Convert::ToInt32(T0->Text)); break;
+							 case '1':T3->Text = Convert::ToString(Convert::ToInt32(T3->Text) - Convert::ToInt32(T1->Text)); break;
+							 case '2':T3->Text = Convert::ToString(Convert::ToInt32(T3->Text) - Convert::ToInt32(T2->Text)); break;
+							 case '3':T3->Text = Convert::ToString(Convert::ToInt32(T3->Text) - Convert::ToInt32(T3->Text)); break;
+							 case '4':T3->Text = Convert::ToString(Convert::ToInt32(T3->Text) - Convert::ToInt32(T4->Text)); break;
+							 } break;
+						 case '4':
+							 switch (mas[i + 6])
+							 {
+							 case '0':T4->Text = Convert::ToString(Convert::ToInt32(T4->Text) - Convert::ToInt32(T0->Text)); break;
+							 case '1':T4->Text = Convert::ToString(Convert::ToInt32(T4->Text) - Convert::ToInt32(T1->Text)); break;
+							 case '2':T4->Text = Convert::ToString(Convert::ToInt32(T4->Text) - Convert::ToInt32(T2->Text)); break;
+							 case '3':T4->Text = Convert::ToString(Convert::ToInt32(T4->Text) - Convert::ToInt32(T3->Text)); break;
+							 case '4':T4->Text = Convert::ToString(Convert::ToInt32(T4->Text) - Convert::ToInt32(T4->Text)); break;
+							 } break;
+						 }
+						
+					}
+					 ////////////////////////////////////////////////////////////////
+					 if (mas[i] == 'm' && mas[i + 1] == 'o' && mas[i + 2] == 'v' && (i + 3<mas->Length) && mas[i + 3] == ' '&&mas[i + 5] == ',')
+					 {
+						 switch (mas[i + 4])
+						 {
+						 case '0':
+							 switch (mas[i + 6])
+							 {
+							 case '0':T0->Text = T0->Text; break;
+							 case '1':T0->Text = T1->Text; break;
+							 case '2':T0->Text = T2->Text; break;
+							 case '3':T0->Text = T3->Text; break;
+							 case '4':T0->Text = T4->Text; break;
+							 } break;
+						 case '1':
+							 switch (mas[i + 6])
+							 {
+							 case '0':T1->Text = T0->Text; break;
+							 case '1':T1->Text = T1->Text; break;
+							 case '2':T1->Text = T2->Text; break;
+							 case '3':T1->Text = T3->Text; break;
+							 case '4':T1->Text = T4->Text; break;
+							 } break;
+						 case '2':
+							 switch (mas[i + 6])
+							 {
+							 case '0':T2->Text = T0->Text; break;
+							 case '1':T2->Text = T1->Text; break;
+							 case '2':T2->Text = T2->Text; break;
+							 case '3':T2->Text = T3->Text; break;
+							 case '4':T2->Text = T4->Text; break;
+							 } break;
+						 case '3':
+							 switch (mas[i + 6])
+							 {
+							 case '0':T3->Text = T0->Text; break;
+							 case '1':T3->Text = T1->Text; break;
+							 case '2':T3->Text = T2->Text; break;
+							 case '3':T3->Text = T3->Text; break;
+							 case '4':T3->Text = T4->Text; break;
+							 } break;
+						 case '4':
+							 switch (mas[i + 6])
+							 {
+							 case '0':T4->Text = T0->Text; break;
+							 case '1':T4->Text = T1->Text; break;
+							 case '2':T4->Text = T2->Text; break;
+							 case '3':T4->Text = T3->Text; break;
+							 case '4':T4->Text = T4->Text; break;
+							 } break;
+						 }
+
+					 }
+					///////////////
+					 if (mas[i] == 'c' && mas[i + 1] == 'm' && mas[i + 2] == 'p' && (i + 3<mas->Length) && mas[i + 3] == ' '&&mas[i + 5] == ',')
+					 {
+						 switch (mas[i + 4])
+						 {
+						 case '0':
+							 switch (mas[i + 6])
+							 {
+							 case '0':if (Convert::ToInt32(T0->Text) > Convert::ToInt32(T0->Text)){ GT->Text = Convert::ToString(1); }; break;
+							 case '1':if (Convert::ToInt32(T0->Text) > Convert::ToInt32(T1->Text)){ GT->Text = Convert::ToString(1); }; break;
+							 case '2':if (Convert::ToInt32(T0->Text) > Convert::ToInt32(T2->Text)){ GT->Text = Convert::ToString(1);; break;
+							 case '3':if (Convert::ToInt32(T0->Text) > Convert::ToInt32(T3->Text)){ GT->Text = Convert::ToString(1);; break;
+							 case '4':if (Convert::ToInt32(T0->Text) > Convert::ToInt32(T4->Text)){ GT->Text = Convert::ToString(1);; break;
+							 } break;
+						 case '1':
+							 switch (mas[i + 6])
+							 {
+							 case '0':if (Convert::ToInt32(T1->Text) > Convert::ToInt32(T0->Text)){ GT->Text = Convert::ToString(1); }; break;
+							 case '1':if (Convert::ToInt32(T1->Text) > Convert::ToInt32(T1->Text)){ GT->Text = Convert::ToString(1); }; break;
+							 case '2':if (Convert::ToInt32(T1->Text) > Convert::ToInt32(T2->Text)){ GT->Text = Convert::ToString(1);; break;
+							 case '3':if (Convert::ToInt32(T1->Text) > Convert::ToInt32(T3->Text)){ GT->Text = Convert::ToString(1);; break;
+							 case '4':if (Convert::ToInt32(T1->Text) > Convert::ToInt32(T4->Text)){ GT->Text = Convert::ToString(1);; break;
+							 } break;
+						 case '2':
+							 switch (mas[i + 6])
+							 {
+							 case '0':if (Convert::ToInt32(T2->Text) > Convert::ToInt32(T0->Text)){ GT->Text = Convert::ToString(1); }; break;
+							 case '1':if (Convert::ToInt32(T2->Text) > Convert::ToInt32(T1->Text)){ GT->Text = Convert::ToString(1); }; break;
+							 case '2':if (Convert::ToInt32(T2->Text) > Convert::ToInt32(T2->Text)){ GT->Text = Convert::ToString(1);; break;
+							 case '3':if (Convert::ToInt32(T2->Text) > Convert::ToInt32(T3->Text)){ GT->Text = Convert::ToString(1);; break;
+							 case '4':if (Convert::ToInt32(T2->Text) > Convert::ToInt32(T4->Text)){ GT->Text = Convert::ToString(1);; break;
+							 } break;
+						 case '3':
+							 switch (mas[i + 6])
+							 {
+							 case '0':if (Convert::ToInt32(T3->Text) > Convert::ToInt32(T0->Text)){ GT->Text = Convert::ToString(1); }; break;
+							 case '1':if (Convert::ToInt32(T3->Text) > Convert::ToInt32(T1->Text)){ GT->Text = Convert::ToString(1); }; break;
+							 case '2':if (Convert::ToInt32(T3->Text) > Convert::ToInt32(T2->Text)){ GT->Text = Convert::ToString(1);; break;
+							 case '3':if (Convert::ToInt32(T3->Text) > Convert::ToInt32(T3->Text)){ GT->Text = Convert::ToString(1);; break;
+							 case '4':if (Convert::ToInt32(T3->Text) > Convert::ToInt32(T4->Text)){ GT->Text = Convert::ToString(1);; break;
+							 } break;
+						 case '4':
+							 switch (mas[i + 6])
+							 {
+							 case '0':if (Convert::ToInt32(T4->Text) > Convert::ToInt32(T0->Text)){ GT->Text = Convert::ToString(1); }; break;
+							 case '1':if (Convert::ToInt32(T4->Text) > Convert::ToInt32(T1->Text)){ GT->Text = Convert::ToString(1); }; break;
+							 case '2':if (Convert::ToInt32(T4->Text) > Convert::ToInt32(T2->Text)){ GT->Text = Convert::ToString(1);; break;
+							 case '3':if (Convert::ToInt32(T4->Text) > Convert::ToInt32(T3->Text)){ GT->Text = Convert::ToString(1);; break;
+							 case '4':if (Convert::ToInt32(T4->Text) > Convert::ToInt32(T4->Text)){ GT->Text = Convert::ToString(1);; break;
 							 } break;
 						 }
 
@@ -368,6 +651,8 @@ namespace Проект1 {
 				 textBox1->Text = gcnew String(mas);
 	}
 private: System::Void label1_Click(System::Object^  sender, System::EventArgs^  e) {
+}
+private: System::Void label8_Click(System::Object^  sender, System::EventArgs^  e) {
 }
 };
 }
